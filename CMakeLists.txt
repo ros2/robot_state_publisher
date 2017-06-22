@@ -88,7 +88,7 @@ if(BUILD_TESTING)
   # This forces cppcheck to consider all files in this project to be C++,
   # including the headers which end with .h, which cppcheck would normally
   # consider to be C instead.
-  ament_cppcheck("--language" "c++")
+  ament_cppcheck(LANGUAGE "c++")
   ament_cpplint()
   ament_lint_cmake()
   ament_uncrustify()
