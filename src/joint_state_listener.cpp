@@ -57,7 +57,7 @@ namespace robot_state_publisher
 
 JointStateListener::JointStateListener(
   rclcpp::Node::SharedPtr node, const KDL::Tree & tree,
-  const MimicMap & m, const std::string& urdf_xml, const urdf::Model & model)
+  const MimicMap & m, const std::string & urdf_xml, const urdf::Model & model)
 : node_(node),
   state_publisher_(node, tree, model, urdf_xml),
   mimic_(m)
@@ -163,11 +163,11 @@ void JointStateListener::callbackJointState(const sensor_msgs::msg::JointState::
 }
 }  // namespace robot_state_publisher
 
-bool read_urdf_xml(const std::string& filename, std::string& xml_string)
+bool read_urdf_xml(const std::string & filename, std::string & xml_string)
 {
   std::fstream xml_file(filename.c_str(), std::fstream::in);
   if (xml_file.is_open()) {
-    while (xml_file.good() ) {
+    while (xml_file.good()) {
       std::string line;
       std::getline(xml_file, line);
       xml_string += (line + "\n");
@@ -221,7 +221,7 @@ int main(int argc, char ** argv)
   // Read the URDF XML data (this should always succeed)
   std::string urdf_xml;
   if (!read_urdf_xml(argv[1], urdf_xml)) {
-    fprintf(stderr, "failed to read urdf xml\n");
+    fprintf(stderr, "failed to read urdf xml '%s'\n", argv[1]);
     return -1;
   }
 
