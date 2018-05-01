@@ -72,7 +72,7 @@ RobotStatePublisher::RobotStatePublisher(
   rclcpp::Node::SharedPtr node_handle,
   const KDL::Tree & tree,
   const urdf::Model & model,
-  const std::string& model_xml)
+  const std::string & model_xml)
 : model_(model),
   tf_broadcaster_(node_handle),
   static_tf_broadcaster_(node_handle),
