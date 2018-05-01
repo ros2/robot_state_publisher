@@ -73,7 +73,7 @@ public:
    */
   RobotStatePublisher(
     rclcpp::Node::SharedPtr node_handle, const KDL::Tree & tree,
-    const urdf::Model & model, const std::string& model_xml);
+    const urdf::Model & model, const std::string & model_xml);
 
   /// Destructor
   virtual ~RobotStatePublisher() {}
