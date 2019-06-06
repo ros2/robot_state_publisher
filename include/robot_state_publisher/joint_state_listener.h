@@ -47,7 +47,7 @@
 #include "sensor_msgs/msg/joint_state.hpp"
 #include "urdf/model.h"
 
-#include "robot_state_publisher/robot_state_publisher.h"
+#include "robot_state_publisher/robot_state_publisher_dashing_hack.h"
 
 typedef std::shared_ptr<sensor_msgs::msg::JointState const> JointStateConstPtr;
 typedef std::map<std::string, urdf::JointMimicSharedPtr> MimicMap;
@@ -75,7 +75,7 @@ protected:
   rclcpp::Node::SharedPtr node_;
   std::string tf_prefix_;
   std::chrono::seconds publish_interval_;
-  robot_state_publisher::RobotStatePublisher state_publisher_;
+  robot_state_publisher::RobotStatePublisherDashingHack state_publisher_;
   rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_state_sub_;
   rclcpp::TimerBase::SharedPtr timer_;
   std::chrono::time_point<std::chrono::system_clock> last_callback_time_;
