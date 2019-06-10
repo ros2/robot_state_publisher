@@ -163,7 +163,7 @@ void RobotStatePublisher::publishFixedTransforms(const std::string & tf_prefix, 
     geometry_msgs::msg::TransformStamped tf_transform = kdlToTransform(seg->second.segment.pose(0));
     rclcpp::Time now = clock_->now();
     if (!use_tf_static) {
-      now = now + rclcpp::Duration(0, 500000000);  // 0.5sec in NS
+      now = now + rclcpp::Duration(std::chrono::milliseconds(500));  // 0.5sec in NS
     }
     tf_transform.header.stamp = now;
 
