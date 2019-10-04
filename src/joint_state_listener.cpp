@@ -80,7 +80,7 @@ JointStateListener::JointStateListener(
 
   use_tf_static_ = true;
   ignore_timestamp_ = false;
-  tf_prefix_ = "";
+  tf_prefix_ = node_->declare_parameter("tf_prefix", "");
   // auto publish_freq = 50.0;
   // publish_interval_ = std::chrono::seconds(1.0/std::max(publish_freq, 1.0));
   publish_interval_ = 1s;
