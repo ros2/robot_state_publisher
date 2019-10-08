@@ -1,3 +1,3 @@
-# ROS2 Version of Robot State Publisher
+# Deprecated ROS2 Version of Robot State Publisher
 
-This package contains a forked version of the original ROS Robot State Publisher with all modifications to compile within a ROS2 Ecosystem.
+This package is now deprecated; development of the ROS 2 version of Robot State Publisher has moved to https://github.com/ros/robot_state_publisher/tree/ros2
