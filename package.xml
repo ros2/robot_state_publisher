@@ -3,7 +3,7 @@
 <package format="2">
   <name>robot_state_publisher</name>
   <version>2.3.0</version>
-  <description>ROS2 version of the robot_state_publisher package</description>
+  <description>Deprecated ROS2 version of the robot_state_publisher package</description>
   <maintainer email="karsten@osrfoundation.org">Karsten Knese</maintainer>
   <license>Apache License 2.0</license>
 
@@ -34,4 +34,3 @@
     <build_type>ament_cmake</build_type>
   </export>
 </package>
-
